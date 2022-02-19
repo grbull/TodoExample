@@ -36,6 +36,7 @@ namespace TodoExample.Api.Controllers
             {
                 return this.NotFound();
             }
+            
             return this.Ok(todoItem);
         }
         
@@ -84,7 +85,9 @@ namespace TodoExample.Api.Controllers
             {
                 return this.NotFound();
             }
+            
             this._todoRepository.Delete(todoId);
+            
             return this.Ok();
         }
     }
